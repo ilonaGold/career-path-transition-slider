@@ -64,6 +64,7 @@ h1 {
 
 .carousel-item-visible {
   display: block;
+  animation: fadeVisibility 0.5s;
 }
 
 .carousel-actions {
@@ -87,6 +88,10 @@ button {
   cursor: pointer;
 }
 
+.arrow {
+  width: 3em;
+}
+
 #carousel-button-prev {
   margin-left: 1em;
   transform: scaleX(-1);
@@ -96,8 +101,16 @@ button {
   margin-right: 1em;
 }
 
-.arrow {
-  width: 3em;
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Media Queries */
